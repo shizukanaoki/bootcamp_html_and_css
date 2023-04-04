@@ -1,0 +1,140 @@
+/* トップページのCSS */
+
+/* ページヘッダー */
+.page-header {
+  background-color: blueviolet;
+}
+
+.page-header__inner {
+  max-width: 1120px;
+  margin: auto;
+  padding: 70px 20px;
+}
+
+.page-header__title {
+  min-width: 300px;
+  width: 40%;
+}
+
+.page-header__sub-title {
+  text-transform: capitalize;
+  font-size: 20px;
+  color: white;
+  margin-top: 20px;
+}
+
+/* カテゴリー */
+
+.category {
+  max-width: 1120px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.category {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.category + .category {
+  padding-top: 0;
+}
+
+.category__title {
+  font-size: 20px;
+  border-left: 3px solid blueviolet;
+  padding-left: 10px;
+}
+
+.category__body {
+  margin-top: 20px;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.grid__item {
+  width: 100%;
+  margin-top: 60px;
+}
+
+.grid__item:first-child {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .grid__item:nth-child(2) {
+    margin-top: 0;
+  }
+}
+
+.category__title {
+  font-size: 30px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 以下の方法でアスペクト比が異なる場合でも、アスペクト比を保ったまま画像を表示することができる
+
+.card__image {
+  position: relative;
+}
+
+.card__image::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+
+.card__image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} */
+
+.card__title {
+  margin-top: 10px;
+  font-size: 24px;
+}
+
+.card__text {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.card__meta {
+  margin-top: 10px;
+  display: flex;
+  align-items: baseline;
+}
+
+.card__meta-item {
+  margin-left: 10px;
+  color: grey;
+  font-size: 16px;
+}
+
+.card__meta-item:first-child {
+  margin-left: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .grid__item {
+    width: calc((100% - 20px) / 2);
+  }
+}
